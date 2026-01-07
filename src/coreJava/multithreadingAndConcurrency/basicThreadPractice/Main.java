@@ -1,4 +1,4 @@
-package coreJava.multithreadingAndConcurrency;
+package coreJava.multithreadingAndConcurrency.basicThreadPractice;
 
 import java.time.Duration;
 
