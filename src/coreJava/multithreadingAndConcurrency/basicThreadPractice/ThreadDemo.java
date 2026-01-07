@@ -1,4 +1,4 @@
-package coreJava.Multithreading;
+package coreJava.multithreadingAndConcurrency;
 
 public class ThreadDemo extends Thread {
 
