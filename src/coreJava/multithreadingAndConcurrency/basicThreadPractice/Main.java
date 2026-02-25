@@ -2,6 +2,7 @@ package coreJava.multithreadingAndConcurrency.basicThreadPractice;
 
 import java.time.Duration;
 
+
 public class Main {
     public static void main(String[] args) {
         var currentThread = Thread.currentThread();
@@ -21,7 +22,7 @@ public class Main {
             for (int i = 1; i <= 3; i++) {
                 System.out.print(" 2 ");
                 try {
-                    Thread.sleep(Duration.ofMillis(250));
+                    Thread.sleep(500);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -34,7 +35,7 @@ public class Main {
         for (int i = 1; i <= 3; i++) {
             System.out.print(" 0 ");
             try {
-                Thread.sleep(Duration.ofSeconds(1));
+                Thread.sleep(Duration.ofSeconds(1).getSeconds());
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
