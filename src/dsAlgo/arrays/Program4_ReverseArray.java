@@ -16,7 +16,7 @@ public class Program4_ReverseArray {
         int temp;
         int n = arr.length-1;
 
-        for(int i=0;i<arr.length;i++){
+        for(int i=0;i<arr.length/2;i++){
             temp = arr[i];
             arr[i] = arr[n];
             arr[n] = temp;
