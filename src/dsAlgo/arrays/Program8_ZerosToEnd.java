@@ -2,12 +2,12 @@ package dsAlgo.arrays;
 
 import java.util.Arrays;
 
-public class Program7_ZerosToEnd {
+public class Program8_ZerosToEnd {
 
     public static void main(String[] args) {
         int[] arr = {1, 2, 0, 0, 0, 0, 5, 0};
 
-        Program7_ZerosToEnd obj = new Program7_ZerosToEnd();
+        Program8_ZerosToEnd obj = new Program8_ZerosToEnd();
         obj.pushZerosToEnd(arr);
 
         System.out.println("Move all zeros to end of array = "+ Arrays.toString(arr));
