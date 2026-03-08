@@ -1,4 +1,4 @@
-package dsAlgo.arrays;
+package dsAlgo.algorithm.searching;
 
 public class Program19_BinarySearch {
     public static void main(String[] args) {
