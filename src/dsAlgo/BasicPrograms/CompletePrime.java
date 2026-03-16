@@ -2,7 +2,7 @@ package dsAlgo.BasicPrograms;
 
 public class CompletePrime {
     public static void main(String[] args) {
-        int n = 28;
+        int n = 27;
         CompletePrime obj = new CompletePrime();
         System.out.println("Is " + n + " complete prime number? " + obj.completePrime(n));
     }
