@@ -34,10 +34,10 @@ public class RecursiveBubbleSort {
 
         while (low < right) {
 
-            if (nums[low] > nums[right]) {
+            if (nums[low] > nums[low+1]) {
                 int temp = nums[low];
-                nums[low] = nums[right];
-                nums[right] = temp;
+                nums[low] = nums[low+1];
+                nums[low+1] = temp;
             }
 
             low++;
