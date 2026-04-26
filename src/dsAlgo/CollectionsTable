@@ -29,3 +29,211 @@
 |                            | **PriorityBlockingQueue** | Heap order                | Allowed     | No null      | Priority tasks               | Thread-safe                                       | Similar to PriorityQueue                           |
 | **Utility Classes**        | **Collections**           | —                         | —           | —            | Utility algorithms           | —                                                 | sort(), reverse(), shuffle()                       |
 |                            | **Arrays**                | —                         | —           | —            | Array utilities              | —                                                 | sort(), binarySearch()                             |
+
+
+JAVA COLLECTION FRAMEWORK (COMPLETE STRUCTURE)
+
+1. Iterable
+- Type: Interface
+- Extended by: Collection
+- Methods:
+  iterator()
+  forEach()
+
+--------------------------------------------------
+
+2. Collection
+- Type: Interface
+- Extends: Iterable
+- Implemented by: List, Set, Queue
+- Methods:
+  add(E e)
+  remove(Object o)
+  size()
+  isEmpty()
+  contains(Object o)
+  clear()
+  iterator()
+
+--------------------------------------------------
+
+3. List (Ordered, allows duplicates)
+- Type: Interface
+- Extends: Collection
+- Implemented by: ArrayList, LinkedList, Vector, Stack
+- Methods:
+  add(E e)
+  add(int index, E element)
+  get(int index)
+  set(int index, E element)
+  remove(int index)
+  indexOf(Object o)
+
+   a) ArrayList
+   - Type: Class
+   - Implements: List
+   - Methods:
+     add(), get(), remove(), size()
+
+   b) LinkedList
+   - Type: Class
+   - Implements: List, Deque
+   - Methods:
+     add(), addFirst(), addLast()
+     removeFirst(), removeLast()
+     get()
+
+   c) Vector (Legacy)
+   - Type: Class
+   - Implements: List
+   - Methods:
+     add(), get(), size()
+
+   d) Stack (Legacy)
+   - Type: Class
+   - Extends: Vector
+   - Methods:
+     push(), pop(), peek()
+
+--------------------------------------------------
+
+4. Set (No duplicates)
+- Type: Interface
+- Extends: Collection
+- Implemented by: HashSet, LinkedHashSet, TreeSet
+- Methods:
+  add(E e)
+  remove(Object o)
+  contains(Object o)
+
+   a) HashSet
+   - Type: Class
+   - Implements: Set
+   - Methods:
+     add(), remove(), contains()
+
+   b) LinkedHashSet
+   - Type: Class
+   - Extends: HashSet
+   - Methods:
+     add(), remove()
+
+   c) TreeSet
+   - Type: Class
+   - Implements: NavigableSet
+   - Methods:
+     add()
+     first(), last()
+     ceiling(), floor()
+
+--------------------------------------------------
+
+5. Queue
+- Type: Interface
+- Extends: Collection
+- Implemented by: PriorityQueue, LinkedList
+- Methods:
+  offer(E e)
+  poll()
+  peek()
+
+   a) Deque
+   - Type: Interface
+   - Extends: Queue
+   - Implemented by: ArrayDeque, LinkedList
+   - Methods:
+     addFirst(), addLast()
+     removeFirst(), removeLast()
+
+   b) PriorityQueue
+   - Type: Class
+   - Implements: Queue
+   - Methods:
+     offer(), poll(), peek()
+
+   c) ArrayDeque
+   - Type: Class
+   - Implements: Deque
+   - Methods:
+     addFirst(), addLast()
+     pollFirst(), pollLast()
+
+--------------------------------------------------
+
+6. Map (Separate hierarchy - NOT part of Collection)
+- Type: Interface
+- Implemented by: HashMap, LinkedHashMap, TreeMap, Hashtable, ConcurrentHashMap
+- Methods:
+  put(K key, V value)
+  get(Object key)
+  remove(Object key)
+  containsKey(Object key)
+  containsValue(Object value)
+  keySet()
+  values()
+
+   a) HashMap
+   - Type: Class
+   - Implements: Map
+   - Methods:
+     put(), get(), remove(), containsKey()
+
+   b) LinkedHashMap
+   - Type: Class
+   - Extends: HashMap
+   - Methods:
+     put(), get()
+
+   c) TreeMap
+   - Type: Class
+   - Implements: NavigableMap
+   - Methods:
+     put()
+     firstKey(), lastKey()
+     ceilingKey(), floorKey()
+
+   d) Hashtable (Legacy)
+   - Type: Class
+   - Implements: Map
+   - Methods:
+     put(), get()
+
+   e) ConcurrentHashMap
+   - Type: Class
+   - Implements: ConcurrentMap
+   - Methods:
+     put(), get(), putIfAbsent()
+
+--------------------------------------------------
+
+7. Utility Classes
+
+a) Collections
+- Type: Class
+- Methods:
+  sort(List)
+  reverse(List)
+  shuffle(List)
+  synchronizedList(List)
+
+b) Arrays
+- Type: Class
+- Methods:
+  sort()
+  binarySearch()
+
+--------------------------------------------------
+
+FINAL HIERARCHY (SHORT VIEW)
+
+Iterable
+ └── Collection
+      ├── List → ArrayList, LinkedList, Vector → Stack
+      ├── Set → HashSet → LinkedHashSet, TreeSet
+      ├── Queue → PriorityQueue, Deque → ArrayDeque, LinkedList
+
+Map (separate)
+ ├── HashMap → LinkedHashMap
+ ├── TreeMap
+ ├── Hashtable
+ └── ConcurrentHashMap
