@@ -21,7 +21,30 @@ public class Program3_SubSequenceProgram {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3};
-        generate(arr, 0, new ArrayList<>());
+        int[] numbers = {1,2,3};
+        int sumTotal=3;
+
+        List<List<Integer>> list = new ArrayList<>();
+        list.add(new ArrayList<>());
+
+        for(int num:numbers)
+        {
+            int size = list.size();
+            for(int i=0 ; i < size ; i++) {
+                List<Integer> list1 = new ArrayList<>(list.get(i));
+                list1.add(num);
+                list.add(list1);
+            }
+        }
+        System.out.println("Subset "+list);
+        for( List<Integer>AL : list){
+            int sum=0;
+            for(int i : AL){
+                sum+=i;
+            }
+            if(sum==sumTotal){
+                System.out.println(AL);
+            }
+        }
     }
 }
